@@ -27,9 +27,9 @@ public class Results extends AppCompatActivity {
         totalcorrect = (TextView) findViewById(R.id.totalcorrect);
         totalincorrect = (TextView) findViewById(R.id.totalincorrect);
 
-        totalquestions.setText("5");
-        totalincorrect.setText(5 - correctes[0]);
-        totalcorrect.setText(correctes[0]);
+        //totalquestions.setText("5");
+        //totalincorrect.setText(5 - correctes[0]);
+        //totalcorrect.setText(correctes[0]);
 
         start.setOnClickListener(new View.OnClickListener() {
             @Override
