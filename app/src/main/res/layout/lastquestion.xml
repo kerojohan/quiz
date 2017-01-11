@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Question 1/5"
+        android:text="Question 5/5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView"
