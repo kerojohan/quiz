@@ -11,27 +11,34 @@ public class Results extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.results);
+
+        Integer total = 5;
+        Integer incorrectes = 0;
 
         TextView totalquestions;
         TextView totalcorrect;
         TextView totalincorrect;
-        Button start = (Button) findViewById(R.id.startbtn);
+        Button tryagain = (Button) findViewById(R.id.tryagain);
         Intent intent = getIntent();
-        final Integer[] correctes = {intent.getIntExtra("correctes",0)};
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.results);
+        Integer correctes = intent.getIntExtra("correctes",0);
 
 
         totalquestions = (TextView) findViewById(R.id.totalquestions);
         totalcorrect = (TextView) findViewById(R.id.totalcorrect);
         totalincorrect = (TextView) findViewById(R.id.totalincorrect);
 
-        //totalquestions.setText("5");
-        //totalincorrect.setText(5 - correctes[0]);
-        //totalcorrect.setText(correctes[0]);
+        totalquestions.setText(total.toString());
+        incorrectes= total - correctes;
+        totalincorrect.setText(incorrectes.toString());
+        totalcorrect.setText(correctes.toString());
 
-        start.setOnClickListener(new View.OnClickListener() {
+        System.out.println("total: "+total);
+        System.out.println("correctes: "+correctes);
+        System.out.println("incorrectes: "+incorrectes);
+
+        tryagain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(getApplicationContext(),FirstQuestion.class);

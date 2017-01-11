@@ -17,19 +17,20 @@ public class FirstQuestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.firstquestion);
 
-        Button submitbtn = (Button) findViewById(R.id.submitbtn);
-        final RadioButton correctradio = (RadioButton) findViewById(R.id.radioButton2);
-        final Integer[] correctes = {0};
+        Button submitbtn = (Button) findViewById(R.id.submitbtn1);
+        final RadioButton correctradio = (RadioButton) findViewById(R.id.radioButton12);
+
 
 
         submitbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Integer correctes = 0;
                 if(correctradio.isChecked()){
-                    correctes[0]++;
+                    correctes++;
                 }
                 Intent intent =new Intent(getApplicationContext(),LastQuestion.class);
-                intent.putExtra("correctes", correctes[0]);
+                intent.putExtra("correctes", correctes);
                 startActivity(intent);
             }
         });

@@ -24,36 +24,39 @@
             android:textStyle="normal|bold"
             android:textSize="24sp"
             android:textAlignment="center" />
-
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
         <RadioButton
             android:text="Argentina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton1" />
+            android:id="@+id/radioButton11" />
 
         <RadioButton
             android:text="Brazil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton2" />
+            android:id="@+id/radioButton12" />
 
         <RadioButton
             android:text="Spain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton3" />
+            android:id="@+id/radioButton13" />
 
         <RadioButton
             android:text="Germany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/radioButton4" />
-
+            android:id="@+id/radioButton14" />
+        </RadioGroup>
         <Button
             android:text="Submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/submitbtn" />
+            android:id="@+id/submitbtn1" />
     </LinearLayout>
 
 </LinearLayout>
